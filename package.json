@@ -4,6 +4,9 @@
   "description": "Add notification bubbles in the favicon",
   "author": "Arnout Kazemier",
   "main" : "index.js",
+  "license": "MIT",
+  "keywords": ["favicon", "favico", "favicount", "tinycon", "counter", "notifications"],
+  "homepage": "https://github.com/3rd-Eden/favicount#readme",
   "repository" : {
     "type": "git",
     "url": "git://github.com/3rd-Eden/favicount.git"

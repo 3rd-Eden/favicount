@@ -54,9 +54,6 @@ versions may be supported, but haven't been tested:
 
 MIT
 
-This is a re factored fork of the original Tinycon library:
-
-Tinycon is released under the MIT license. It is simple and easy to understand and places almost no restrictions on what you can do with Tinycon.
-[More Information](http://en.wikipedia.org/wiki/MIT_License)
-
-Tinycon was inspired by [Notificon](https://github.com/makeable/Notificon)
+This is a re factored fork of the original Tinycon library, Tinycon is released
+under the MIT license. Tinycon was inspired by
+[Notificon](https://github.com/makeable/Notificon)
