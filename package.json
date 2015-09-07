@@ -1,6 +1,6 @@
 {
   "name": "favicount",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Add notification bubbles in the favicon",
   "author": "Arnout Kazemier",
   "main" : "index.js",
