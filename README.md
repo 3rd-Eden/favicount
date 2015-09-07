@@ -1,90 +1,66 @@
-# Tinycon
+# Favicount
 
-A small library for manipulating the favicon, in particular adding alert bubbles and changing images. Tinycon gracefully falls back to a number in title approach for browers that don't support canvas or dynamic favicons.
+Favicount a maintained fork of the `tinycon` library. It add notification counts
+to your favicon for browser that support it and gracefully degrades to nothing
+when the browser does not support these transformations.
 
-<img src="https://github.com/tommoor/tinycon/blob/master/examples/screenshot.png?raw=true" />
+## Installation
 
-<a href="http://tommoor.github.com/tinycon/">See the Live Demo here.</a>
+The module is against a commonjs module system and is released in the public npm
+registry and can be installed by running:
 
-## Documentation
-
-Tinycon adds a single object to the global namespace and does not require initialisation. 
-
-### Basic Usage
-
-```javascript
-Tinycon.setBubble(6);
+```
+npm install --save favicount
 ```
 
-### Options
+## Usage
 
-Tinycon can take a range of options to customise the look
+In all examples we assume that you've already required the library as following:
+
+```js
+var favicount = require('favicount');
+```
+
+```javascript
+favicount.set(6);
+```
+
+### configure
+
+The following options can be configured:
 
 * width: the width of the alert bubble
 * height: the height of the alert bubble
-* font: a css string to use for the fontface (recommended to leave this)
-* colour: the foreground font colour
+* font: a CSS string to use for the fontface (recommended to leave this)
+* color: the foreground font color
 * background: the alert bubble background colour
-* fallback: should we fallback to a number in brackets for browsers that don't support canvas/dynamic favicons? Boolean, or use the string 'force' to ensure a title update even in supported browsers.
-* abbreviate: should tinycon shrink large numbers such as 1000 to an abbreviated version (1k). Boolean, defaults to true
 
-```javascript
-Tinycon.setOptions({
-	width: 7,
-	height: 9,
-	font: '10px arial',
-	colour: '#ffffff',
-	background: '#549A2F',
-	fallback: true
-});
-```
-
-### AMD support
-
-Tinycon can also be used as an asynchronous module.
-
-```javascript
-require([
-	'tinycon.js'
-], function (T) {
-
-	T.setOptions({
-		width: 7,
-		height: 9,
-		font: '10px arial',
-		colour: '#ffffff',
-		background: '#549A2F',
-		fallback: true
-	});
-
-	T.setBubble(7);
-
+```js
+favicount.configure({
+  background: '#549A2F',
+  color: '#ffffff',
+  font: '10px arial',
+  height: 9,
+  width: 7
 });
 ```
 
 ## Browser Support
 
-Tinycon has been tested to work completely in the following browsers. Older versions may be supported, but haven't been tested:
+Favicount has been tested to work completely in the following browsers. Older
+versions may be supported, but haven't been tested:
 
 * Chrome 15+
 * Firefox 9+
 * Opera 11+
 
-Currently the library degrades to title update:
-
-* Internet Explorer 9
-* Safari 5
-
-
 ## License / Credits
+
+MIT
+
+This is a re factored fork of the original Tinycon library:
 
 Tinycon is released under the MIT license. It is simple and easy to understand and places almost no restrictions on what you can do with Tinycon.
 [More Information](http://en.wikipedia.org/wiki/MIT_License)
 
 Tinycon was inspired by [Notificon](https://github.com/makeable/Notificon)
-
-
-## Download
-
-Releases are available for download from
-[GitHub](http://github.com/tommoor/tinycon/downloads).

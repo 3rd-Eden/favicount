@@ -1,14 +1,11 @@
 {
-  "name": "tinycon",
-  "version": "0.6.4",
+  "name": "favicount",
+  "version": "0.0.0",
   "description": "Add notification bubbles in the favicon",
-  "author": "Tom Moor <tom.moor@gmail.com> (http://tommoor.com)",
-  "main" : "./tinycon.js",
+  "author": "Arnout Kazemier",
+  "main" : "index.js",
   "repository" : {
     "type": "git",
-    "url": "git://github.com/tommoor/tinycon.git"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.5",
+    "url": "git://github.com/3rd-Eden/favicount.git"
   }
 }
