@@ -11,7 +11,7 @@ var original = null
 //
 // Calculate the size of the font and canvas element based on device's ratio.
 //
-var ratio = window.devicePixelRatio || 1
+var ratio = Math.ceil(window.devicePixelRatio) || 1
   , size = 16 * ratio;
 
 //
