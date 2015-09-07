@@ -1,8 +1,8 @@
 # Favicount
 
-Favicount a maintained fork of the `tinycon` library. It add notification counts
-to your favicon for browser that support it and gracefully degrades to nothing
-when the browser does not support these transformations.
+Favicount a maintained fork/refactor of the `tinycon` library. It add
+notification counts to your favicon for browser that support it and gracefully
+degrades to nothing when the browser does not support these transformations.
 
 ## Installation
 
@@ -36,13 +36,9 @@ The following options can be configured:
 * background: the alert bubble background colour
 
 ```js
-favicount.configure({
-  background: '#549A2F',
-  color: '#ffffff',
-  font: '10px arial',
-  height: 9,
-  width: 7
-});
+favicount
+.configure('width', 9)
+.configure('background', '#549A2F');
 ```
 
 ## Browser Support

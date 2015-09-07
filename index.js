@@ -113,7 +113,7 @@ function setFaviconTag(url){
 }
 
 /**
- * Draw the favicon
+ * Draw the favicon.
  *
  * @param {String|Number} label text on the icon
  * @param {String} color Bubble color.
@@ -139,8 +139,10 @@ function drawFavicon(label, color) {
     setFaviconTag(canvas.toDataURL());
   };
 
+  //
   // allow cross origin resource requests if the image is not a data:uri
   // as detailed here: https://github.com/mrdoob/three.js/issues/1305
+  //
   if (!src.match(/^data/) && options.crossOrigin) {
     favicon.crossOrigin = 'anonymous';
   }
@@ -228,6 +230,8 @@ module.exports = {
    */
   configure: function configure(key, value) {
     options[key] = value || options[key];
+
+    return this;
   },
 
   /**
@@ -245,6 +249,11 @@ module.exports = {
     return true;
   },
 
+  /**
+   * Restore the favicon to it's original self.
+   *
+   * @api public
+   */
   reset: function reset(){
     setFaviconTag(original);
   }
